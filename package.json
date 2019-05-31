@@ -1,0 +1,23 @@
+{
+  "name": "loyalty-admin-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "aws-sdk": "^2.466.0",
+    "electron": "^5.0.2",
+    "electron-reload": "^1.4.0",
+    "jquery": "^3.4.1",
+    "spectre": "0.0.1",
+    "spectre.css": "^0.5.8"
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
