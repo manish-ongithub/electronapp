@@ -6,13 +6,16 @@
   "dependencies": {
     "aws-sdk": "^2.466.0",
     "electron": "^5.0.2",
+    "electron-modal": "^1.0.0",
     "electron-reload": "^1.4.0",
+    "is-electron-renderer": "^2.0.1",
     "jquery": "^3.4.1",
     "spectre": "0.0.1",
     "spectre.css": "^0.5.8"
   },
   "devDependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "is-electron-renderer": "^2.0.1"
   },
   "scripts": {
     "start": "electron ."

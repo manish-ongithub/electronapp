@@ -3,7 +3,9 @@ const { app, BrowserWindow, Menu } = require("electron");
 const { ipcMain } = require("electron");
 const path = require("path");
 const url = require("url");
-require("electron-reload")(__dirname);
+const modal = require("electron-modal");
+
+//require("electron-reload")(__dirname);
 
 // Create menu template
 const mainMenuTemplate = [
@@ -49,6 +51,8 @@ let mainWindow;
 let loginWindow;
 
 app.on("ready", () => {
+  console.log("app ready");
+  modal.setup();
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -61,7 +65,7 @@ app.on("ready", () => {
   mainWindow.loadURL(path.join());
 
   mainWindow.loadFile("index.html");
-
+  mainWindow.webContents.openDevTools();
   child = new BrowserWindow({
     parent: mainWindow,
     width: 400,

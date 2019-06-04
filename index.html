@@ -3,69 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World!</title>
+    <script>
+      window.$ = window.jQuery = require("jquery");
+    </script>
+
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!--
-    <link rel="stylesheet" href="style.css" />
-    -->
-    <script src="./index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="vendor/material-components-web.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto"
+      rel="stylesheet"
+    />
+    <script src="vendor/material-components-web.min.js"></script>
   </head>
 
   <body>
-    <button class="btn btn-primary" id="btn_open_modal">
-      Open Modal
-    </button>
-
-    <div class="modal modal-sm" id="example-modal-2">
-      <a class="modal-overlay" href="#modals-sizes" aria-label="Close"></a>
-      <div class="modal-container" role="document">
-        <div class="modal-header">
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div
+        class="border-right d-flex flex-column justify-content-between"
+        id="sidebar-wrapper"
+      >
+        <div class="list-group list-group-flush">
           <a
-            class="btn btn-clear float-right"
-            href="#modals-sizes"
-            aria-label="Close"
-          ></a>
-          <div class="modal-title h5">Modal title</div>
-        </div>
-        <div class="modal-body">
-          <div class="content">
-            <form>
-              <div class="form-group">
-                <label class="form-label" for="input-example-7">Name</label>
-                <input
-                  class="form-input"
-                  id="input-example-7"
-                  type="text"
-                  placeholder="Name"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Gender</label>
-                <label class="form-radio">
-                  <input type="radio" name="gender" /><i class="form-icon"></i>
-                  Male
-                </label>
-                <label class="form-radio">
-                  <input type="radio" name="gender" checked="" /><i
-                    class="form-icon"
-                  ></i>
-                  Female
-                </label>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary">Submit</button
-          ><a class="btn btn-link" href="#modals-sizes" aria-label="Close"
-            >Close</a
+            href="#"
+            //onclick="showNotificationWindow()"
+            class="list-group-item list-group-item-action "
+            >Profile
+            <i class="material-icons">
+              account_circle
+            </i>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action"
+            //onclick="showAnalyzeWindow()"
+            >Customers
+            <i class="material-icons">
+              portrait
+            </i>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action"
+            //onclick="showPredictWindow()"
           >
+            Coupons
+            <i class="material-icons">
+              local_mall
+            </i>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action"
+            //onclick="showPredictWindow()"
+          >
+            Rewards
+            <i class="material-icons">
+              loyalty
+            </i>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action"
+            //onclick="showPredictWindow()"
+          >
+            Redemptions
+            <i class="material-icons">
+              list
+            </i>
+          </a>
+          <a
+            href="#"
+            class="list-group-item list-group-item-action"
+            //onclick="showPredictWindow()"
+          >
+            Campaigns
+            <i class="material-icons">
+              view_list
+            </i>
+          </a>
         </div>
+        <div id="about">
+          <div>
+            Loyalty Admin
+          </div>
+          <div class="hr"></div>
+          <div>v1.0.0</div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+      <div id="page-content-wrapper">
+            <div class="container-fluid d-flex">
+                <div class="stocks w-50 main-container">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <h3>My Profile Information</h3>
+                      </div>
+                </div>
+            </div>       
       </div>
     </div>
   </body>
+  <script src="./index.js"></script>
 </html>
