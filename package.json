@@ -5,6 +5,9 @@
   "main": "main.js",
   "dependencies": {
     "aws-sdk": "^2.466.0",
+    "datatables.net": "^1.10.19",
+    "datatables.net-dt": "^1.10.19",
+    "datatables.net-editor": "^1.6.5",
     "electron": "^5.0.2",
     "electron-modal": "^1.0.0",
     "electron-reload": "^1.4.0",

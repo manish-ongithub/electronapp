@@ -37,3 +37,65 @@ $("#exampleModalCenter").on("shown.bs.modal", function() {
     }
   });
 });
+function ShowCustomerPage() {
+  $("#divCustomerActions").show();
+  $("#divCampaignActions").hide();
+  $("#divVoucherActions").hide();
+  $("#divProfileDetails").hide();
+  $.ajax({
+    url: "customer.html",
+    dataType: "html",
+    async: true,
+    success: function(html) {
+      $("#divCustomerActions").html(html);
+      /*
+      $.getScript("myscript.js", function() {
+        $("#content input[type=checkbox]").attr("checked", "true");
+      });
+      */
+    }
+  });
+}
+
+function ShowVoucherPage() {
+  $("#divCustomerActions").hide();
+  $("#divCampaignActions").hide();
+  $("#divProfileDetails").hide();
+  $("#divVoucherActions").show();
+  $.ajax({
+    url: "voucher.html",
+    dataType: "html",
+    async: true,
+    success: function(html) {
+      $("#divVoucherActions").html(html);
+      /*
+      $.getScript("myscript.js", function() {
+        $("#content input[type=checkbox]").attr("checked", "true");
+      });
+      */
+    }
+  });
+}
+
+function ShowProfilePage() {
+  $("#divCustomerActions").hide();
+  $("#divCampaignActions").hide();
+  $("#divVoucherActions").hide();
+  $("#divProfileDetails").show();
+  $("#divProfileDetails").load("profile.html");
+  /*
+  $.ajax({
+    url: "profile.html",
+    dataType: "html",
+    async: true,
+    success: function(html) {
+      $("#divProfileDetails").html(html);
+      
+      // $.getScript("myscript.js", function() {
+      //   $("#content input[type=checkbox]").attr("checked", "true");
+      // });
+      
+    }
+  });
+  */
+}
